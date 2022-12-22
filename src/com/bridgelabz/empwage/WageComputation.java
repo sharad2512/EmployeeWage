@@ -4,15 +4,21 @@ public class WageComputation {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee wage computation program");
         final int WAGE_PER_HRS = 20;
-        final int WORKING_HRS = 8;
-        int dailyWage = 0;
-        double empCheck = Math.floor(Math.random() * 10) % 2;
+        int IS_PART_TIME = 1;
+        int IS_FULL_TIME = 2;
+        int empWage = 0;
+        int empHrs = 0;
+        double empCheck = Math.floor(Math.random() * 10) % 3;
         if (empCheck == 1) {
-            System.out.println("Employee is present ");
-            dailyWage = WORKING_HRS * WAGE_PER_HRS;
+            System.out.println("Employee worked as part time");
+            empHrs = 4;
+        } else if (empCheck == 2) {
+            System.out.println("Employee worked as full time ");
+            empHrs = 8;
         } else {
             System.out.println("Employee is absent");
         }
-        System.out.println("Employee Daily Wage Is " + dailyWage);
+        empWage = empHrs * WAGE_PER_HRS;
+        System.out.println("Employee Wage Is " + empWage);
     }
 }
