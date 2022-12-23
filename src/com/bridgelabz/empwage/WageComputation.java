@@ -3,6 +3,7 @@ package com.bridgelabz.empwage;
 public class WageComputation {
 
     public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Program");
         final int empWagePerHrs = 20;
         final int WORKING_DAYS_IN_MONTH = 20;
         final int MAX_HRS_IN_MONTH = 100;
@@ -12,9 +13,8 @@ public class WageComputation {
         int totalEmployeeHrs = 0;
         int totalWorkingDays = 0;
         while (totalEmployeeHrs <= MAX_HRS_IN_MONTH &&
-                totalWorkingDays <= WORKING_DAYS_IN_MONTH) {
+                totalWorkingDays < WORKING_DAYS_IN_MONTH) {
             totalWorkingDays++;
-            {
                 int empCheck = (int) Math.floor(Math.random() * 10) % 3;
                 switch (empCheck) {
                     case IS_FULL_TIME:
@@ -32,7 +32,6 @@ public class WageComputation {
             int totalEmployeeWage = totalEmployeeHrs * empWagePerHrs;
             System.out.println("Total Employee Wage " + totalEmployeeWage);
         }
-    }
 }
 
 
